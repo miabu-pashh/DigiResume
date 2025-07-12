@@ -1,0 +1,93 @@
+.projects-container {
+  padding: 0.5rem 1rem 1rem 1rem;
+  color: #111;
+  width: 100%;
+  max-width: 45rem;
+  margin: 0 auto;
+}
+
+.projects-heading {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 0.5rem 0 0.3rem 0; /* ↓ Reduced top margin */
+}
+
+.projects-summary {
+  font-size: 0.8rem;
+  text-align: justify;
+  color: #333;
+  margin-bottom: 0.6rem;
+  line-height: 1.15;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.project-entry {
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.project-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.1rem;
+}
+
+.project-desc,
+.project-tech {
+  font-size: 0.78rem;
+  color: #222;
+  text-align: justify;
+  margin: 0;
+  line-height: 1.15;
+}
+
+.project-tech {
+  font-weight: 500;
+  margin-top: 1px;
+}
+
+.project-links {
+  margin-top: 3px;
+  font-size: 0.76rem;
+}
+
+.project-link {
+  color: #1d4ed8;
+  text-decoration: none;
+  font-weight: 500;
+  margin-right: 0.8rem;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.swipe-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+
+.swipe-button {
+  margin: 0; /* ✅ Ensures no extra space around buttons */
+  padding: 0.3rem 1.2rem;
+  background-color: #374151;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.swipe-button:hover {
+  background-color: #1f2937;
+}

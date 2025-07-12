@@ -1,0 +1,93 @@
+.education-container {
+  width: 100%;
+  padding: 1rem;
+  color: #111;
+}
+
+.education-heading {
+  text-align: center;
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: bold;
+  margin: 0;
+}
+
+/* Wrapper to constrain max-width */
+.education-wrapper {
+  margin-top: 0.5rem;
+  width: 100%;
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.education-card {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.education-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0.25rem 0;
+}
+
+.education-location {
+  font-size: 0.9rem;
+  color: #555;
+  font-style: italic;
+  margin: 0.1rem 0;
+}
+
+.education-detail {
+  font-size: 0.9rem;
+  margin: 0.1rem 0;
+}
+
+.section-title {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+}
+
+.education-description {
+  font-size: 0.9rem;
+  text-align: justify;
+  /* margin-bottom: 0.8rem; */
+  margin: 0;
+}
+
+.awards-list {
+  padding-left: 1.3rem;
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.awards-list li {
+  margin-bottom: 0.3rem;
+}
+
+/* Navigation Buttons */
+.swipe-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8rem;
+}
+
+.swipe-button {
+  margin: 0; /* ✅ Ensures no extra space around buttons */
+  padding: 0.3rem 1.2rem;
+  background-color: #374151;
+  color: white;
+  font-size: 0.85rem;
+  font-weight: 500;
+  border-radius: 9999px;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.swipe-button:hover {
+  background-color: #1f2937;
+}

@@ -1,0 +1,48 @@
+/* SwipeContainer.css */
+
+.swipe-outer-container {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+
+  /* Desktop layout */
+  width: 700px;
+  min-height: 900px;
+  max-height: 95vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+}
+
+.swipe-inner-container {
+  background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  width: 700px;
+  min-height: 900px;
+  max-height: 95vh;
+}
+
+/* 🔁 Mobile responsiveness */
+@media (max-width: 768px) {
+  .swipe-outer-container {
+    width: 100vw;
+    height: 100vh;
+    max-height: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .swipe-inner-container {
+    width: 100vw;
+    height: 100vh;
+    max-height: none;
+    min-height: 100vh;
+    padding: 16px;
+    box-shadow: none;
+  }
+}
