@@ -5,8 +5,9 @@ import "../css/EducationPage.css";
 const EducationPage = ({ onNext, onBack }) => {
   return (
     <div className="education-container">
-      <h2 className="education-heading">Education</h2>
       <div className="education-wrapper">
+        <h2 className="education-heading">Education</h2>
+
         <div className="education-card">
           <h3 className="education-title">Saint Louis University</h3>
           <p className="education-location">St. Louis, MO, USA</p>

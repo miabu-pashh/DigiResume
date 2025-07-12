@@ -1,14 +1,30 @@
 .thankyou-container {
-  max-width: 800px;
-  margin: auto;
-  padding: 2rem 2rem 1.5rem;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced properly */
+  align-items: center;
+  color: #1a202c;
+  width: 100%;
+  padding: 1rem;
+  position: relative; /* Allows child elements to use absolute positioning */
+  padding-bottom: 3rem;
 }
-
+.thankyou-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
 .thankyou-title {
   text-align: center;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1.2rem;
+  font-size: 2rem; /* text-3xl */
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 2rem;
 }
 
 .thankyou-message {
@@ -16,6 +32,7 @@
   line-height: 1.7;
   margin-bottom: 1rem;
   color: #333;
+  text-align: justify;
 }
 
 .contact-info {
@@ -38,32 +55,9 @@
 }
 
 .closing-line {
-  margin-top: 2rem;
+  margin-top: 5rem;
   font-style: italic;
   font-size: 1rem;
   text-align: center;
   color: #555;
-}
-.swipe-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.8rem;
-}
-
-.swipe-button {
-  margin: 0; /* ✅ Ensures no extra space around buttons */
-  padding: 0.3rem 1.2rem;
-  background-color: #374151;
-  color: white;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border-radius: 9999px;
-  border: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.swipe-button:hover {
-  background-color: #1f2937;
 }

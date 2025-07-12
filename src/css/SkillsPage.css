@@ -1,18 +1,34 @@
 .skills-page-container {
-  color: #111;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced properly */
+  align-items: center;
+  color: #1a202c;
+  width: 100%;
+  padding: 1rem;
+  position: relative; /* Allows child elements to use absolute positioning */
+  padding-bottom: 3rem;
+}
+.skills-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
   padding: 1rem;
 }
-
 .skills-heading {
   text-align: center;
-  font-size: 1.875rem; /* text-3xl */
-  font-weight: bold;
-  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
 }
 
 /* Table formatting */
 .skills-table {
-  margin-top: 2rem;
   margin-left: auto;
   margin-right: auto;
   width: 98%;
@@ -39,10 +55,11 @@
   border-bottom: 1px solid black;
 }
 
+/* descripton section */
+
 .skills-description-section {
   list-style-type: disc;
   margin-top: 1.5rem;
-  margin-right: 1rem;
   display: flex;
   flex-direction: column;
   gap: 0.1rem;
@@ -57,29 +74,4 @@
 .skill-desc-item::marker {
   color: #374151; /* Dark gray */
   font-weight: bold;
-}
-
-/* Navigation Buttons */
-.swipe-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.8rem;
-}
-
-.swipe-button {
-  margin: 0; /* ✅ Ensures no extra space around buttons */
-  padding: 0.3rem 1.2rem;
-  background-color: #374151;
-  color: white;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border-radius: 9999px;
-  border: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.swipe-button:hover {
-  background-color: #1f2937;
 }

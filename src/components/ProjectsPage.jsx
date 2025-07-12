@@ -60,14 +60,6 @@ const projects = [
     demo: "https://email-sorter-demo.com",
   },
   {
-    title: "Research Paper Overview",
-    description:
-      "Displays academic insights, topics, and citation metrics in a summarized format.",
-    tech: "React, Chart.js, JSON Viewer",
-    github: "https://github.com/your-research-app",
-    demo: "https://research-demo.com",
-  },
-  {
     title: "Material Donor Mutual Assist",
     description:
       "Tracks donated items and sends reminder emails to encourage donor engagement.",
@@ -80,49 +72,51 @@ const projects = [
 const ProjectsPage = ({ onNext, onBack }) => {
   return (
     <div className="projects-container">
-      <h2 className="projects-heading">Projects</h2>
-      <p className="projects-summary">
-        I've built full-stack applications ranging from AI-powered resume tools
-        and budget managers to healthcare systems and educational platforms.
-        Each project showcases my ability to design, develop, and deploy
-        impactful tech solutions.
-      </p>
-      <div className="projects-list">
-        {projects.map((project, index) => (
-          <div className="project-entry" key={index}>
-            <div className="project-title">{project.title}</div>
-            <p className="project-desc">{project.description}</p>
-            <p className="project-tech">
-              <strong>Tech Stack:</strong> {project.tech}
-            </p>
-            <div className="project-links">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noreferrer"
-                className="project-link"
-              >
-                GitHub
-              </a>
-              <a
-                href={project.demo}
-                target="_blank"
-                rel="noreferrer"
-                className="project-link"
-              >
-                Live Demo
-              </a>
+      <div className="projects-wrapper">
+        <h2 className="projects-heading">Projects</h2>
+        <p className="projects-summary">
+          I've built full-stack applications ranging from AI-powered resume
+          tools and budget managers to healthcare systems and educational
+          platforms. Each project showcases my ability to design, develop, and
+          deploy impactful tech solutions.
+        </p>
+        <div className="projects-list">
+          {projects.map((project, index) => (
+            <div className="project-entry" key={index}>
+              <div className="project-title">{project.title}</div>
+              <p className="project-desc">{project.description}</p>
+              <p className="project-tech">
+                <strong>Tech Stack:</strong> {project.tech}
+              </p>
+              <div className="project-links">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link"
+                >
+                  GitHub
+                </a>
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="project-link"
+                >
+                  Live Demo
+                </a>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-      <div className="swipe-buttons">
-        <button onClick={onBack} className="swipe-button">
-          ← Back
-        </button>
-        <button onClick={onNext} className="swipe-button">
-          Next →
-        </button>
+          ))}
+        </div>
+        <div className="swipe-buttons">
+          <button onClick={onBack} className="swipe-button">
+            ← Back
+          </button>
+          <button onClick={onNext} className="swipe-button">
+            Next →
+          </button>
+        </div>
       </div>
     </div>
   );

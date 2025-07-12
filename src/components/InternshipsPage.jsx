@@ -66,49 +66,51 @@ const internships = [
 const InternshipsPage = ({ onNext, onBack }) => {
   return (
     <div className="internships-page-container">
-      <h2 className="internships-heading">Internships</h2>
+      <div className="internships-wrapper">
+        <h2 className="internships-heading">Internships</h2>
 
-      <p className="internships-summary">
-        Over the course of multiple internships, I gained hands-on experience in
-        full-stack development, data visualization, and user experience design.
-        From building donor tracking systems and birthday celebration apps to
-        creating HCI-based websites and data-driven stories, I have consistently
-        contributed to impactful projects using modern tech stacks like React,
-        Node.js, SQL, and CI/CD pipelines.
-      </p>
+        <p className="internships-summary">
+          Over the course of multiple internships, I gained hands-on experience
+          in full-stack development, data visualization, and user experience
+          design. From building donor tracking systems and birthday celebration
+          apps to creating HCI-based websites and data-driven stories, I have
+          consistently contributed to impactful projects using modern tech
+          stacks like React, Node.js, SQL, and CI/CD pipelines.
+        </p>
 
-      <div className="internships-list">
-        {internships.map((item, index) => (
-          <div key={index} className="internship-card">
-            <div className="internship-logo">
-              <img src={item.logo} alt={item.company} />
-            </div>
-            <div className="internship-details">
-              <h3>{item.title}</h3>
-              <p className="company">
-                {item.company} · {item.location}
-              </p>
-              <p className="date">{item.date}</p>
-              {/* <p className="location">{item.location}</p> */}
-              <p className="description">{item.description}</p>
-              <p className="tech">
-                <strong>Tech Stack:</strong> {item.techStack}
-              </p>
-              {/* <p className="skills">
+        <div className="internships-list">
+          {internships.map((item, index) => (
+            <div key={index} className="internship-card">
+              <div className="internship-logo">
+                <img src={item.logo} alt={item.company} />
+              </div>
+              <div className="internship-details">
+                <h3>{item.title}</h3>
+                <p className="company">
+                  {item.company} · {item.location}
+                </p>
+                <p className="date">{item.date}</p>
+                {/* <p className="location">{item.location}</p> */}
+                <p className="description">{item.description}</p>
+                <p className="tech">
+                  <strong>Tech Stack:</strong> {item.techStack}
+                </p>
+                {/* <p className="skills">
                 <strong>Skills:</strong> {item.skills}
               </p> */}
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      <div className="swipe-buttons">
-        <button onClick={onBack} className="swipe-button">
-          ← Back
-        </button>
-        <button onClick={onNext} className="swipe-button">
-          Next →
-        </button>
+        <div className="swipe-buttons">
+          <button onClick={onBack} className="swipe-button">
+            ← Back
+          </button>
+          <button onClick={onNext} className="swipe-button">
+            Next →
+          </button>
+        </div>
       </div>
     </div>
   );

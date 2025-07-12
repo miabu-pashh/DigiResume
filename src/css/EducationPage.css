@@ -1,23 +1,31 @@
 .education-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced properly */
+  align-items: center;
+  color: #1a202c;
   width: 100%;
   padding: 1rem;
-  color: #111;
+  position: relative; /* Allows child elements to use absolute positioning */
+  padding-bottom: 3rem;
 }
-
+.education-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
 .education-heading {
   text-align: center;
-  font-size: 1.875rem; /* text-3xl */
-  font-weight: bold;
-  margin: 0;
-}
-
-/* Wrapper to constrain max-width */
-.education-wrapper {
-  margin-top: 0.5rem;
-  width: 100%;
-  max-width: 44rem;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  /* margin-bottom: 1.5rem; */
 }
 
 .education-card {
@@ -71,11 +79,13 @@
 .swipe-buttons {
   display: flex;
   justify-content: space-between;
-  margin-top: 0.8rem;
+  width: 100%;
+  padding: 0 1rem;
+  position: absolute;
 }
 
 .swipe-button {
-  margin: 0; /* ✅ Ensures no extra space around buttons */
+  margin: 0;
   padding: 0.3rem 1.2rem;
   background-color: #374151;
   color: white;

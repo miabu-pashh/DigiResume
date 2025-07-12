@@ -1,31 +1,37 @@
-// src/components/AboutMePage.jsx
 import React from "react";
 import "../css/AboutMePage.css";
 import profileImage from "/Images/ProfilePic.jpeg"; // Adjust the path as necessary
-import AnimatedTitle from "./AnimatedTitle"; // adjust path if needed
 
 const AboutMePage = ({ onNext, onBack }) => {
   return (
     <div className="about-container">
       <div className="about-content">
         <h2 className="about-heading">About Me</h2>
-        {/* <AnimatedTitle text="SOFTWARE ENGINEERING" /> */}
         <img src={profileImage} alt="Profile" className="about-img" />
+
         <p className="about-text">
           Hello! I'm <strong>Mahaboob Pasha Mohammad</strong>, a passionate
-          graduate student of Software Engineering at Saint Louis University. I
-          graduated with a Master's degree and have immersed myself in areas
-          like Software Development, AI, and HCI — all fueling my passion for
-          cutting-edge tech and innovation. Outside coding, I enjoy leading
-          workshops and building creative projects.
+          software engineer and a recent graduate from Saint Louis University
+          with a Master's in Software Engineering. My interests lie at the
+          intersection of{" "}
+          <strong>
+            AI, Human-Computer Interaction (HCI), and Full-Stack Development
+          </strong>
+          . I thrive on transforming abstract ideas into meaningful, scalable,
+          and human-centric digital solutions. From building intuitive user
+          interfaces to architecting complex backend systems, I enjoy crafting
+          end-to-end applications that solve real-world problems. I believe
+          technology should not only work — it should connect, inspire, and
+          elevate the human experience.
         </p>
-        <p className="about-text">
-          I come from India, Southern part. I have done my Schooling and
-          Bachelor's degree there before moving to the United States for my
-          Master's.
-        </p>
+
+        <blockquote className="about-quote">
+          “I believe in building software that’s not just functional, but
+          thoughtful — technology with a human touch.”
+        </blockquote>
       </div>
-      <div className="flex justify-between w-full mt-6">
+
+      <div className="swipe-buttons">
         <button onClick={onBack} className="swipe-button">
           ← Back
         </button>

@@ -1,23 +1,39 @@
 .achievements-container {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced properly */
+  align-items: center;
+  color: #1a202c;
+  width: 100%;
+  padding: 1rem;
+  position: relative; /* Allows child elements to use absolute positioning */
+  padding-bottom: 3rem;
+}
+.achievements-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
   width: 100%;
   margin: 0 auto;
-  padding: 1.2rem;
-  font-size: 0.95rem;
-  color: #333;
+  padding: 1rem;
 }
 
 .achievements-title {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin: 0;
-  margin-bottom: 1rem;
   text-align: center;
-  color: #111;
+  font-size: 1.5rem; /* text-3xl */
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 2rem;
 }
 
 .achievement-section {
-  margin-bottom: 1.5rem;
-  /* background-color: antiquewhite; */
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
+  text-align: justify;
+  color: #333;
 }
 
 .achievement-header {
@@ -65,30 +81,6 @@
   height: 1px;
   background-color: #ccc;
   margin: 1.5rem 0;
-}
-
-.swipe-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.8rem;
-}
-
-.swipe-button {
-  margin: 0; /* ✅ Ensures no extra space around buttons */
-  padding: 0.3rem 1.2rem;
-  background-color: #374151;
-  color: white;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border-radius: 9999px;
-  border: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.swipe-button:hover {
-  background-color: #1f2937;
 }
 .buggy-images-row {
   display: flex;

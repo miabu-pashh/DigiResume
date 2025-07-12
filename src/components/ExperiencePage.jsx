@@ -76,10 +76,10 @@ const ExperiencePage = ({ onNext, onBack }) => {
 
   return (
     <div className="experience-page-container">
-      <h2 className="experience-heading">Professional Experience</h2>
+      <div className="experience-wrapper">
+        <h2 className="experience-heading">Professional Experience</h2>
 
-      <ul className="experience-summary">
-        <p>
+        <p className="experience-summary">
           Software Engineer with 4+ years of experience in Banking, HealthCare,
           and eCommerce sectors, specializing in Java Full Stack Development
           with React/Angular, Spring Boot, Microservices, and AWS
@@ -88,41 +88,41 @@ const ExperiencePage = ({ onNext, onBack }) => {
           Spring MVC, Microservices and JSF for building efficient backend
           solutions.
         </p>
-      </ul>
 
-      {experiences.map((exp, idx) => (
-        <div className="experience-card" key={idx}>
-          <div className="experience-header">
-            <img src={exp.logo} alt="logo" className="experience-logo" />
-            <div className="experience-details">
-              <h3 className="experience-title">{exp.title}</h3>
+        {experiences.map((exp, idx) => (
+          <div className="experience-card" key={idx}>
+            <div className="experience-header">
+              <img src={exp.logo} alt="logo" className="experience-logo" />
+              <div className="experience-details">
+                <h3 className="experience-title">{exp.title}</h3>
 
-              <p className="experience-company">{exp.company}</p>
+                <p className="experience-company">{exp.company}</p>
 
-              <p className="experience-duration">
-                {exp.duration} {exp.location}
-              </p>
-              {/* <p className="experience-location">{exp.location}</p> */}
+                <p className="experience-duration">
+                  {exp.duration} {exp.location}
+                </p>
+                {/* <p className="experience-location">{exp.location}</p> */}
+              </div>
             </div>
+            <ul className="experience-bullets">
+              {exp.bullets.map((point, i) => (
+                <li key={i}>{point}</li>
+              ))}
+            </ul>
+            <p className="experience-skills">
+              <strong>Skills:</strong> {exp.skills.join(" · ")}
+            </p>
           </div>
-          <ul className="experience-bullets">
-            {exp.bullets.map((point, i) => (
-              <li key={i}>{point}</li>
-            ))}
-          </ul>
-          <p className="experience-skills">
-            <strong>Skills:</strong> {exp.skills.join(" · ")}
-          </p>
-        </div>
-      ))}
+        ))}
 
-      <div className="swipe-buttons">
-        <button onClick={onBack} className="swipe-button">
-          ← Back
-        </button>
-        <button onClick={onNext} className="swipe-button">
-          Next →
-        </button>
+        <div className="swipe-buttons">
+          <button onClick={onBack} className="swipe-button">
+            ← Back
+          </button>
+          <button onClick={onNext} className="swipe-button">
+            Next →
+          </button>
+        </div>
       </div>
     </div>
   );

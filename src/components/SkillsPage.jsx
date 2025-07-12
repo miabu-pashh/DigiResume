@@ -47,34 +47,37 @@ const descriptions = [
 const SkillsPage = ({ onNext, onBack }) => {
   return (
     <div className="skills-page-container">
-      <h2 className="skills-heading">Technical Skills</h2>
+      <div className="skills-wrapper">
+        <h2 className="skills-heading">Technical Skills</h2>
 
-      <table className="skills-table">
-        <tbody>
-          {Object.entries(skillsTable).map(([category, tools], index) => (
-            <tr key={category}>
-              <th>{category}</th>
-              <td>{tools}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+        <table className="skills-table">
+          <tbody>
+            {Object.entries(skillsTable).map(([category, tools], index) => (
+              <tr key={category}>
+                <th>{category}</th>
+                <td>{tools}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <div className="skills-description-section">
+          <ul>
+            {descriptions.map((item, index) => (
+              <li key={index} className="skill-desc-item">
+                {item.text}
+              </li>
+            ))}
+          </ul>
+        </div>
 
-      <ul className="skills-description-section">
-        {descriptions.map((item, index) => (
-          <li key={index} className="skill-desc-item">
-            {item.text}
-          </li>
-        ))}
-      </ul>
-
-      <div className="swipe-buttons">
-        <button onClick={onBack} className="swipe-button">
-          ← Back
-        </button>
-        <button onClick={onNext} className="swipe-button">
-          Next →
-        </button>
+        <div className="swipe-buttons">
+          <button onClick={onBack} className="swipe-button">
+            ← Back
+          </button>
+          <button onClick={onNext} className="swipe-button">
+            Next →
+          </button>
+        </div>
       </div>
     </div>
   );

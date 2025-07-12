@@ -1,30 +1,44 @@
 .projects-container {
-  padding: 0.5rem 1rem 1rem 1rem;
-  color: #111;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced properly */
+  align-items: center;
+  color: #1a202c;
   width: 100%;
-  max-width: 45rem;
-  margin: 0 auto;
+  padding: 1rem;
+  position: relative; /* Allows child elements to use absolute positioning */
+  padding-bottom: 3rem;
 }
-
+.projects-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
 .projects-heading {
-  font-size: 1.4rem;
-  font-weight: 700;
   text-align: center;
-  margin: 0.5rem 0 0.3rem 0; /* ↓ Reduced top margin */
+  font-size: 1.5rem; /* text-3xl */
+  font-weight: 700;
+  margin: 0;
 }
 
 .projects-summary {
-  font-size: 0.8rem;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.4;
   text-align: justify;
   color: #333;
-  margin-bottom: 0.6rem;
-  line-height: 1.15;
 }
 
 .projects-list {
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  gap: 0.7rem;
+  width: 100%;
 }
 
 .project-entry {
@@ -66,28 +80,4 @@
 
 .project-link:hover {
   text-decoration: underline;
-}
-
-.swipe-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.8rem;
-}
-
-.swipe-button {
-  margin: 0; /* ✅ Ensures no extra space around buttons */
-  padding: 0.3rem 1.2rem;
-  background-color: #374151;
-  color: white;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border-radius: 9999px;
-  border: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.swipe-button:hover {
-  background-color: #1f2937;
 }

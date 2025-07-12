@@ -1,31 +1,42 @@
 .experience-page-container {
-  color: #222;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between; /* Ensures content is spaced properly */
+  align-items: center;
+  color: #1a202c;
+  width: 100%;
   padding: 1rem;
-  max-width: 750px;
-  margin: auto;
+  position: relative; /* Allows child elements to use absolute positioning */
+  padding-bottom: 3rem;
 }
-
+.experience-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
 .experience-heading {
-  font-size: 1.4rem;
-  font-weight: 700;
   text-align: center;
-  margin-bottom: 0.6rem;
+  font-size: 1.5rem; /* text-3xl */
+  font-weight: 700;
+  margin: 0;
 }
 
 .experience-summary {
-  font-size: 0.85rem;
-  padding-left: 1.2rem;
+  font-size: 0.95rem;
   margin-bottom: 0.8rem;
   line-height: 1.4;
-}
-
-.experience-summary li {
-  margin-bottom: 0.3rem;
+  text-align: justify;
+  color: #333;
 }
 
 .experience-card {
   padding: 0.5rem 0;
-  margin-bottom: 0.6rem;
+  /* margin-bottom: 0.6rem; */
   border-top: 1px solid #ddd;
 }
 
@@ -77,27 +88,4 @@
   color: #444;
   margin-left: 1rem;
   margin-top: 0.3rem;
-}
-.swipe-buttons {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0.8rem;
-}
-
-.swipe-button {
-  margin: 0; /* ✅ Ensures no extra space around buttons */
-  padding: 0.3rem 1.2rem;
-  background-color: #374151;
-  color: white;
-  font-size: 0.85rem;
-  font-weight: 500;
-  border-radius: 9999px;
-  border: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.swipe-button:hover {
-  background-color: #1f2937;
 }
